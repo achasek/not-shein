@@ -9,8 +9,9 @@ export default function NavBar({ user, setUser }) {
     }
 
     return (
+        // update links with icons later
         <nav>
-            <Link to="/orders">Order History</Link>
+            <Link to="/favorites">Favorites</Link>
             &nbsp; | &nbsp;
             <Link to="/orders/new">New Order</Link>
             &nbsp; | &nbsp;
