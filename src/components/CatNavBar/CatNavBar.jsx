@@ -6,9 +6,11 @@ export default function NavBar({ user, setUser }) {
     return (
         // update links with icons later
         <nav className="CatNavBar">
-            <Link to="/favorites">Favorites2</Link>
+            <Link to="/categories">Shop All</Link>
             &nbsp; | &nbsp;
-            <Link to="/orders/new">New Order2</Link>
+            <Link to="/categories/mens">Shop Mens</Link>
+            &nbsp; | &nbsp;
+            <Link to="/categories/womens">Shop Womens</Link>
         </nav>
     )
 }

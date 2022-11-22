@@ -1,6 +1,7 @@
 import * as userService from '../../utilities/users-service'
 
-export default function OrderHistoryPage() {
+// only users should be able to see their own favorites. pass user down here
+export default function FavoritesPage({ user }) {
 
     async function handleCheckToken() {
         const expDate = await userService.checkToken()
