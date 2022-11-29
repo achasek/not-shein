@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import * as itemsAPI from '../../utilities/items-api';
+import * as ordersAPI from '../../utilities/orders-api';
 import ProductList from '../../components/ProductList/ProductList';
 
 export default function MensPage() {
     const [productItems, setProductItems] = useState([])
+    const [cart, setCart] = useState(null)
 
     useEffect(function() {
         async function getItems() {
@@ -11,6 +13,12 @@ export default function MensPage() {
             setProductItems(items);
         }
         getItems();
+
+        async function getCart() {
+            const cart = await ordersAPI.getCart();
+            setCart(cart);
+        }
+        getCart();
     }, []);
 
     return (
