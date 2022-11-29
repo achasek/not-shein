@@ -10,8 +10,6 @@ export default function ProductList ({ productItems }) {
         :
         <p>Loading</p>
     
-        
-    console.log(items)
     return (
         <main>
             {items}

@@ -9,7 +9,6 @@ export default function MensPage() {
     useEffect(function() {
         async function getItems() {
             const items = await itemsAPI.getAll();
-            console.log(items)
             setProductItems(items);
         }
         getItems();

@@ -10,6 +10,7 @@ import WomensPage from '../WomensPage/WomensPage';
 import FavoritesPage from '../FavoritesPage/FavoritesPage'
 import NavBar from '../../components/NavBar/NavBar'
 import CatNavBar from '../../components/CatNavBar/CatNavBar'
+import ShowPage from '../ShowPage/ShowPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser())
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="/categories" element={<CategoriesPage />} />
             <Route path="/categories/mens" element={<MensPage />} />
             <Route path="/categories/womens" element={<WomensPage />} />
+            <Route path="/:id" element={<ShowPage />} />
             {/* change this to home page later */}
             <Route path="/*" element={<Navigate to="/orders/new" />} />
           </Routes>

@@ -14,9 +14,11 @@ require('./config/database');
     await Item.deleteMany({});
     const items = await Item.create([
         {name: 'Cotton T-Shirt', category: categories[0], waterPrice: '2,700 gallons of water', carbonPrice: '22,800 kilograms in carbon emissions', image: './public/images/shirt1.jpeg'},
-        {name: 'Slim Fit Denim', category: categories[1], waterPrice: '3,800 gallons of water', carbonPrice: '33,400 kilograms in carbon emissions', image: './public/images/jeans1.jpeg'}
+        {name: 'Slim Fit Denim', category: categories[1], waterPrice: '3,800 gallons of water', carbonPrice: '33,400 kilograms in carbon emissions', image: './public/images/jeans1.jpeg'},
+        {name: 'Regular Fit Denim', category: categories[0], waterPrice: '3,900 gallons of water', carbonPrice: '33,400 kilograms in carbon emissions', image: './public/images/jeans1.jpeg'},
+        {name: 'Blouse', category: categories[1], waterPrice: '3,000 gallons of water', carbonPrice: '23,000 kilograms in carbon emissions', image: './public/images/jeans1.jpeg'},
     ])
 
     process.exit();
-
+    
 })();

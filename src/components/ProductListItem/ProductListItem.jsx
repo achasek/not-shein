@@ -1,11 +1,15 @@
+import { Link } from 'react-router-dom';
+
 export default function ProductListItem({ productItem }) {
     return (
         <div>
-            <div>{productItem.name}</div>
-            <div>{productItem.waterPrice}</div>
-            <div>{productItem.carbonPrice}</div>
-            <div><img src={productItem.image} alt="product"/></div>
-            <button>Add to Cart</button>
+            <Link to={`/${productItem._id}`}>
+                <div>{productItem.name}</div>
+                <div>{productItem.waterPrice}</div>
+                <div>{productItem.carbonPrice}</div>
+                <div><img src={productItem.image} alt="product"/></div>
+            </Link>
+                <button>Add to Cart</button>
         </div>
     )
 }
