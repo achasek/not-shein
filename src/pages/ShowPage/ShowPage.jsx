@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import * as itemsAPI from '../../utilities/items-api';
 
-export default function ShowPage() {
+export default function ShowPage({ productItems, cart }) {
     let { id } = useParams() 
     const [item, setItem] = useState({})
 
