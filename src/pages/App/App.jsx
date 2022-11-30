@@ -19,6 +19,7 @@ export default function App() {
   const [productItems, setProductItems] = useState([])
   const [cart, setCart] = useState(null)
 
+
   useEffect(function() {
       async function getItems() {
           const items = await itemsAPI.getAll();
@@ -34,7 +35,7 @@ export default function App() {
   }, []);
 
   /*--- Event Handlers --- */
-  async function handleAddToOrder(itemId) {
+  async function handleAddToCart(itemId) {
     alert(`add item: ${itemId}`);
   }
 
@@ -50,7 +51,7 @@ export default function App() {
             <Route path="/categories" element={<CategoriesPage />} />
             <Route path="/categories/mens" element={<MensPage productItems={productItems} cart={cart} />} />
             <Route path="/categories/womens" element={<WomensPage productItems={productItems} cart={cart} />} />
-            <Route path="/:id" element={<ShowPage productItems={productItems} cart={cart} handleAddToOrder={handleAddToOrder} />} />
+            <Route path="/:id" element={<ShowPage productItems={productItems} cart={cart} handleAddToCart={handleAddToCart} />} />
             {/* change this to home page later */}
             <Route path="/*" element={<Navigate to="/orders/new" />} />
           </Routes>

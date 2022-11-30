@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import * as itemsAPI from '../../utilities/items-api';
 
-export default function ShowPage({ productItems, cart }) {
+export default function ShowPage({ productItems, cart, handleAddToCart }) {
     let { id } = useParams() 
     const [item, setItem] = useState({})
 
@@ -21,7 +21,7 @@ export default function ShowPage({ productItems, cart }) {
             <div>{item.waterPrice}</div>
             <div>{item.carbonPrice}</div>
             <div><img src={item.image} alt="product"/></div>
-            <button>Add to Cart</button>
+            <button onClick={() => handleAddToCart(item._id)}>Add to Cart</button>
         </div>
     )
 }

@@ -9,7 +9,6 @@ export default function ProductListItem({ productItem }) {
                 <div>{productItem.carbonPrice}</div>
                 <div><img src={productItem.image} alt="product"/></div>
             </Link>
-                <button>Add to Cart</button>
         </div>
     )
 }
