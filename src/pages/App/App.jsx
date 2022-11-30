@@ -37,6 +37,8 @@ export default function App() {
   /*--- Event Handlers --- */
   async function handleAddToCart(itemId) {
     alert(`add item: ${itemId}`);
+    const updatedCart = await ordersAPI.addItemToCart(itemId)
+    setCart(updatedCart)
   }
 
   return (
