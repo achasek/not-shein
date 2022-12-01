@@ -8,7 +8,7 @@ export default function ProductList ({ productItems }) {
         productItem={item}
         />)
         :
-        <p>Loading</p>
+        <p>Loading...</p>
     
     return (
         <main>

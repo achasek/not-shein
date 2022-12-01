@@ -22,6 +22,7 @@ export default function MensPage({ productItems, cart }) {
     //     getCart();
     // }, []);
 
+    console.log(productItems)
     return (
         <div>
             <ProductList

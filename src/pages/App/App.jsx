@@ -35,10 +35,19 @@ export default function App() {
   }, []);
 
   /*--- Event Handlers --- */
-  async function handleAddToCart(itemId) {
-    alert(`add item: ${itemId}`);
+  async function handleAddToCart(itemId, name) {
     const updatedCart = await ordersAPI.addItemToCart(itemId)
     setCart(updatedCart)
+    alert(`added item: ${name} to cart`);
+  }
+
+  async function handleChangeQty(itemId, newQty) {
+    const updatedCart = await ordersAPI.setItemQtyInCart(itemId, newQty);
+    setCart(updatedCart);
+  }
+
+  async function handleCheckout() {
+    alert('checked out')
   }
 
   return (
@@ -48,7 +57,7 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <CatNavBar />
           <Routes>
-            <Route path="/orders/new" element={<CartPage productItems={productItems} cart={cart} />} />
+            <Route path="/orders/new" element={<CartPage productItems={productItems} cart={cart} handleChangeQty={handleChangeQty} handleCheckout={handleCheckout} />} />
             <Route path="/favorites" element={<FavoritesPage user={user} />} />
             <Route path="/categories" element={<CategoriesPage />} />
             <Route path="/categories/mens" element={<MensPage productItems={productItems} cart={cart} />} />

@@ -11,10 +11,10 @@ const itemSchema = new Schema({
         ref: 'Category'
     },
     waterPrice: {
-        type: String
+        type: Number
     },
     carbonPrice: {
-        type: String
+        type: Number
     },
     image: {
         type: String

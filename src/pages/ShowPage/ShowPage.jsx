@@ -9,6 +9,7 @@ export default function ShowPage({ productItems, cart, handleAddToCart }) {
     useEffect(function() {
         async function getItem() {
             const item = await itemsAPI.getById(id);
+            console.log(item)
             setItem(item);
         }
         getItem();
@@ -18,10 +19,10 @@ export default function ShowPage({ productItems, cart, handleAddToCart }) {
         <div>
             <h1>show page</h1>
             <div>{item.name}</div>
-            <div>{item.waterPrice}</div>
-            <div>{item.carbonPrice}</div>
+            <div>{`${item.waterPrice} gallons of water`}</div>
+            <div>{`${item.carbonPrice} kilograms of carbon emissions`}</div>
             <div><img src={item.image} alt="product"/></div>
-            <button onClick={() => handleAddToCart(item._id)}>Add to Cart</button>
+            <button onClick={() => handleAddToCart(item._id, item.name)}>Add to Cart</button>
         </div>
     )
 }

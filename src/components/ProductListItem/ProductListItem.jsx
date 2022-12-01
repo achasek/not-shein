@@ -5,8 +5,8 @@ export default function ProductListItem({ productItem }) {
         <div>
             <Link to={`/${productItem._id}`}>
                 <div>{productItem.name}</div>
-                <div>{productItem.waterPrice}</div>
-                <div>{productItem.carbonPrice}</div>
+                <div>{`${productItem.waterPrice} gallons of water`}</div>
+                <div>{`${productItem.carbonPrice} kilograms in carbon emissions`}</div>
                 <div><img src={productItem.image} alt="product"/></div>
             </Link>
         </div>
