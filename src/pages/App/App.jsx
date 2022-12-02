@@ -40,7 +40,7 @@ export default function App() {
   async function handleAddToCart(itemId, name) {
     const updatedCart = await ordersAPI.addItemToCart(itemId)
     setCart(updatedCart)
-    alert(`added item: ${name} to cart`);
+    // alert(`added item: ${name} to cart`);
   }
 
   async function handleChangeQty(itemId, newQty) {
@@ -49,9 +49,9 @@ export default function App() {
   }
 
   async function handleCheckout() {
-    alert('checked out')
+    // alert('checked out')
     await ordersAPI.checkout();
-    navigate('/categories');
+    setTimeout(() => {navigate('/categories')}, 3000)
   }
 
   return (

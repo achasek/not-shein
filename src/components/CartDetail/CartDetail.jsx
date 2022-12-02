@@ -1,11 +1,15 @@
 import LineItem from '../LineItem/LineItem';
 import './CartDetail.css';
 import Button from 'react-bootstrap/Button';
-// import { Link } from 'react-router-dom';
+import Modal from 'react-bootstrap/Modal';
+import { useState } from 'react'
 
 export default function CartDetail({ cart, handleChangeQty, handleCheckout }) {
-    if(!cart) return null;
-
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
+  if(!cart) return null;
+  
     const lineItems = cart.lineItems.map(item =>
         <LineItem
           lineItem={item}
@@ -15,6 +19,11 @@ export default function CartDetail({ cart, handleChangeQty, handleCheckout }) {
           handleCheckout={handleCheckout}
         />
     );
+
+    function handleClick() {
+      handleCheckout();
+      handleShow()
+    }
 
     return (
         <div>
@@ -39,12 +48,10 @@ export default function CartDetail({ cart, handleChangeQty, handleCheckout }) {
                   {cart.isPaid ?
                     <span>TOTAL&nbsp;&nbsp;</span>
                     :
-                    // <Link to='/checkout'>
                     <Button size="lg"
-                    onClick={handleCheckout}
+                    onClick={handleClick}
                     disabled={!lineItems.length}
                     >CHECKOUT</Button>
-                    // {/* </Link> */}
                     
                   }
                 </section>
@@ -58,6 +65,15 @@ export default function CartDetail({ cart, handleChangeQty, handleCheckout }) {
               <div>Cart Empty</div>
             }
             </div>
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Checked Out
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <h2>Thank You! Stripe Payment Coming Soon</h2>
+                </Modal.Body>
+            </Modal>
         </div>
     )
 }
