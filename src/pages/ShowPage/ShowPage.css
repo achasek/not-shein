@@ -1,0 +1,18 @@
+.showCardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showCard {
+    width: 30rem;
+}
+
+.showBtn {
+    margin-bottom: 10px;
+}
+
+.showTitle {
+    margin-top: 10px;
+    font-size: 25px;
+}

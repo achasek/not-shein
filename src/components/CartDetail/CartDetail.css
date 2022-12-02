@@ -1,0 +1,25 @@
+.superContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 250, 250);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.cartCartItemsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 20rem);
+    grid-template-rows: repeat(3);
+    grid-gap: 60px;
+}
+
+.cartCheckout {
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    border-radius: 8px 8px 0 0;
+    padding: 10px;
+}
+
+.cartItemTitle, .cartItemWater, .cartItemCarbon {
+    box-shadow: 0 4px 2px -2px gray;
+    padding: 3px;
+}

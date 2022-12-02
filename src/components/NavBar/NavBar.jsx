@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import * as userService from '../../utilities/users-service'
+import './NavBar.css';
 
 export default function NavBar({ user, setUser }) {
 
@@ -10,14 +11,14 @@ export default function NavBar({ user, setUser }) {
 
     return (
         // update links with icons later
-        <nav>
-            <Link to="/favorites">Favorites</Link>
+        <nav className='navBar'>
+            <Link to="/favorites" className='linkOne'>Favorites</Link>
             &nbsp; | &nbsp;
-            <Link to="/orders/new">Cart</Link>
+            <Link to="/orders/new" className='linkTwo'>Cart</Link>
             &nbsp; | &nbsp;
-            Welcome, {user.name}
+            <span className='welcome'>Welcome, {user.name}</span>
             &nbsp; | &nbsp;
-            <Link to="" onClick={handleLogOut}>Log Out</Link>
+            <Link to="" onClick={handleLogOut} className='linkThree'>Log Out</Link>
         </nav>
     )
 }

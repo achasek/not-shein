@@ -1,4 +1,6 @@
 import LineItem from '../LineItem/LineItem';
+import './CartDetail.css';
+import Button from 'react-bootstrap/Button';
 // import { Link } from 'react-router-dom';
 
 export default function CartDetail({ cart, handleChangeQty, handleCheckout }) {
@@ -27,27 +29,30 @@ export default function CartDetail({ cart, handleChangeQty, handleCheckout }) {
             <div>
             {lineItems.length ?
               <>
-                {lineItems}
-                <section>
+                <section className='cartCheckout'>
+                  <span className='cartItemTitle'>{cart.totalQty} items</span>
+                  &nbsp; | &nbsp;
+                  <span className='cartItemWater'>{cart.waterTotal} gallons of water used for your order</span>
+                  &nbsp; | &nbsp;
+                  <span className='cartItemCarbon'>{cart.carbonTotal} kilograms of total carbon emitted for your order</span>
+                  &nbsp; &nbsp;
                   {cart.isPaid ?
                     <span>TOTAL&nbsp;&nbsp;</span>
                     :
                     // <Link to='/checkout'>
-                      <button
-                        className="btn-sm"
-                        onClick={handleCheckout}
-                        disabled={!lineItems.length}
-                      >CHECKOUT</button>
+                    <Button size="lg"
+                    onClick={handleCheckout}
+                    disabled={!lineItems.length}
+                    >CHECKOUT</Button>
                     // {/* </Link> */}
                     
                   }
-                  &nbsp; &nbsp;
-                  <span>{cart.totalQty}</span>
-                  &nbsp; &nbsp;
-                  <span>{cart.waterTotal} gallons of water used for your order</span>
-                  &nbsp; &nbsp;
-                  <span>{cart.carbonTotal} kilograms of total carbon emitted for your order</span>
                 </section>
+                <div className='superContainer'>
+                <main className='cartCartItemsContainer'>
+                  {lineItems}
+                </main>
+                </div>
               </>
               :
               <div>Cart Empty</div>

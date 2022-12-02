@@ -1,0 +1,12 @@
+.navBar {
+    font-size: 25px;
+}
+
+.linkOne, .linkTwo, .linkThree {
+    text-decoration: none;
+    color: black;
+}
+
+.welcome {
+    font-weight: 900;
+}

@@ -1,4 +1,13 @@
 .CatNavBar {
     left: 0;
-    height: 100%
+    height: 100%;
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    font-size: 25px;
+}
+
+.linkOne, .linkTwo, .linkThree {
+    text-decoration: none;
+    color: black;
 }

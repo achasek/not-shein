@@ -1,4 +1,5 @@
 import ProductListItem from '../../components/ProductListItem/ProductListItem';
+import './ProductList.css';
 
 export default function ProductList ({ productItems }) {
     const items = productItems.length ? 
@@ -11,8 +12,10 @@ export default function ProductList ({ productItems }) {
         <p>Loading...</p>
     
     return (
-        <main>
-            {items}
-        </main>
+        <div className='mainContainer'>
+            <main className='indexList'>
+                {items}
+            </main>
+        </div>
     )
 }

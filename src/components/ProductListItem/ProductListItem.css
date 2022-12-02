@@ -1,0 +1,12 @@
+.indexCard {
+    margin: 2rem;
+}
+
+.indexCardTitle, .indexCardWater, .indexCardCarbon {
+    text-decoration: none;
+    color: black;
+}
+
+.indexLink {
+    text-decoration: none;
+}

@@ -1,0 +1,24 @@
+.cartItemCard {
+    width: 20rem;
+    padding: 10px;
+    margin: 20px;
+}
+
+.cartItemTitle {
+    margin-top: 10px;
+}
+
+.cartQty {
+    padding: 10px;
+}
+
+.cartQtyBtns {
+    display: flex;
+    justify-content: center;
+}
+
+.cartItemCardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

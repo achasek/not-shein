@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom'
 import './App.css';
 import { getUser } from '../../utilities/users-service'
 import AuthPage from '../AuthPage/AuthPage'
@@ -13,11 +13,13 @@ import CatNavBar from '../../components/CatNavBar/CatNavBar'
 import ShowPage from '../ShowPage/ShowPage';
 import * as itemsAPI from '../../utilities/items-api';
 import * as ordersAPI from '../../utilities/orders-api';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
   const [user, setUser] = useState(getUser())
   const [productItems, setProductItems] = useState([])
   const [cart, setCart] = useState(null)
+  const navigate = useNavigate();
 
 
   useEffect(function() {
@@ -48,6 +50,8 @@ export default function App() {
 
   async function handleCheckout() {
     alert('checked out')
+    await ordersAPI.checkout();
+    navigate('/categories');
   }
 
   return (

@@ -1,26 +1,16 @@
-import { Link } from 'react-router-dom'
-// import { useEffect } from 'react'
+import { Link } from 'react-router-dom';
+import './CategoriesPage.css';
 
 export default function CategoriesPage() {
-    
-    // function loadProducts() {
-    //     fetch('https://asos2.p.rapidapi.com/v2/auto-complete?q=bikini%20top&store=US&country=US&currency=USD&sizeSchema=US&lang=en-US')
-    //     .then(response => response.json())
-    //     .then(response => console.log(response))
-    //     .catch(err => console.error(err));
-    // }
-    
-    // useEffect(() => {loadProducts()})
 
     return (
-        <>
-            <h1>All Categoires</h1>
-            <div>
-                <Link to="/categories/mens">Shop Mens</Link>
+        <div>
+            <h1>All Categories</h1>
+            <div className='catContainer'>
+                    <Link to="/categories/mens"><div className='mensCat'></div></Link>
+
+                    <Link to="/categories/womens"><div className='womensCat'></div></Link>
             </div>
-            <div>
-                <Link to="/categories/womens">Shop Womens</Link>
-            </div>
-        </>
+        </div>
     )
 }
