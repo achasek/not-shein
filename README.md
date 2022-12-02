@@ -37,3 +37,4 @@ The source code can be found <a href="https://github.com/achasek/not-shein">here
 
 ## Coming Soon
 - Stripe Integrated Mock Payment
+- Added Shipping Options
