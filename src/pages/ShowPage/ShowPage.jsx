@@ -33,8 +33,8 @@ export default function ShowPage({ productItems, cart, handleAddToCart }) {
             <Card className="showCard">
                 <div>
                     <Card.Title className='showTitle'><div>{item.name}</div></Card.Title>
-                    <Card.Body><div>{`${item.waterPrice} gallons of water`}</div>
-                    <div>{`${item.carbonPrice} kilograms of carbon emissions`}</div></Card.Body>
+                    <Card.Body><div>{`${item.waterPrice} total gallons of water used to produce this`}</div>
+                    <div>{`${item.carbonPrice} total kilograms of carbon emitted to produce this`}</div></Card.Body>
                     <Button className='showBtn' onClick={handleClick}>Add to Cart</Button>
                     <Card.Img variant='bottom' src={item.image} alt="product"/>
                 </div>

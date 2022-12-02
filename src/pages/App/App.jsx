@@ -40,7 +40,6 @@ export default function App() {
   async function handleAddToCart(itemId, name) {
     const updatedCart = await ordersAPI.addItemToCart(itemId)
     setCart(updatedCart)
-    // alert(`added item: ${name} to cart`);
   }
 
   async function handleChangeQty(itemId, newQty) {
@@ -49,7 +48,6 @@ export default function App() {
   }
 
   async function handleCheckout() {
-    // alert('checked out')
     await ordersAPI.checkout();
     setTimeout(() => {navigate('/categories')}, 3000)
   }
@@ -67,7 +65,6 @@ export default function App() {
             <Route path="/categories/mens" element={<MensPage productItems={productItems} cart={cart} />} />
             <Route path="/categories/womens" element={<WomensPage productItems={productItems} cart={cart} />} />
             <Route path="/:id" element={<ShowPage productItems={productItems} cart={cart} handleAddToCart={handleAddToCart} />} />
-            {/* change this to home page later */}
             <Route path="/*" element={<Navigate to="/categories" />} />
           </Routes>
         </>
