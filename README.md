@@ -12,7 +12,7 @@ The source code can be found <a href="https://github.com/achasek/not-shein">here
 
 ##Screenshots:
 
-<img src="./images/ss1.png" width="900">
+<img src="./public/images/ss1.png" width="900">
 
 
 ## Technologies Used:
