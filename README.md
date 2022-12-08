@@ -10,9 +10,12 @@ The site can be found <a href="https://notshein.herokuapp.com/">here</a>
 
 The source code can be found <a href="https://github.com/achasek/not-shein">here</a>
 
-##Screenshots:
+## Screenshots:
 
 <img src="./public/images/ss1.png" width="900">
+<img src="./public/images/ss2.png" width="900">
+<img src="./public/images/ss3.png" width="900">
+<img src="./public/images/ss4.png" width="900">
 
 
 ## Technologies Used:
