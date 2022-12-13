@@ -27,6 +27,7 @@ async function setItemQtyInCart(req, res) {
 async function checkout(req, res) {
     const cart = await Order.getCart(req.user._id);
     cart.isPaid = true;
+    // cart.lineItems.deleteMany({});
     await cart.save(); 
     res.json(cart);
   }

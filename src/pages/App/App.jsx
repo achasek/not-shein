@@ -14,6 +14,7 @@ import ShowPage from '../ShowPage/ShowPage';
 import * as itemsAPI from '../../utilities/items-api';
 import * as ordersAPI from '../../utilities/orders-api';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ImpactPage from '../ImpactPage/ImpactPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser())
@@ -40,6 +41,7 @@ export default function App() {
   async function handleAddToCart(itemId, name) {
     const updatedCart = await ordersAPI.addItemToCart(itemId)
     setCart(updatedCart)
+    setTimeout(() => {navigate('/categories')}, 3000)
   }
 
   async function handleChangeQty(itemId, newQty) {
@@ -49,7 +51,7 @@ export default function App() {
 
   async function handleCheckout() {
     await ordersAPI.checkout();
-    setTimeout(() => {navigate('/categories')}, 3000)
+    setTimeout(() => {navigate('/impact')}, 3000)
   }
 
   return (
@@ -65,6 +67,7 @@ export default function App() {
             <Route path="/categories/mens" element={<MensPage productItems={productItems} cart={cart} />} />
             <Route path="/categories/womens" element={<WomensPage productItems={productItems} cart={cart} />} />
             <Route path="/:id" element={<ShowPage productItems={productItems} cart={cart} handleAddToCart={handleAddToCart} />} />
+            <Route path="/impact" element={<ImpactPage />} />
             <Route path="/*" element={<Navigate to="/categories" />} />
           </Routes>
         </>
