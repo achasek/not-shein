@@ -67,7 +67,7 @@ export default function App() {
             <Route path="/categories/mens" element={<MensPage productItems={productItems} cart={cart} />} />
             <Route path="/categories/womens" element={<WomensPage productItems={productItems} cart={cart} />} />
             <Route path="/:id" element={<ShowPage productItems={productItems} cart={cart} handleAddToCart={handleAddToCart} />} />
-            <Route path="/impact" element={<ImpactPage />} />
+            <Route path="/impact" element={<ImpactPage cart={cart} />} />
             <Route path="/*" element={<Navigate to="/categories" />} />
           </Routes>
         </>

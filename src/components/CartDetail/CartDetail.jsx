@@ -39,7 +39,11 @@ export default function CartDetail({ cart, handleChangeQty, handleCheckout }) {
             {lineItems.length ?
               <>
                 <section className='cartCheckout'>
+                  {cart.totalQty === 1 ?
+                  <span className='cartItemTitle'>{cart.totalQty} item</span>
+                  :
                   <span className='cartItemTitle'>{cart.totalQty} items</span>
+                  }
                   &nbsp; | &nbsp;
                   <span className='cartItemWater'>{cart.waterTotal} gallons of water used for your order</span>
                   &nbsp; | &nbsp;
