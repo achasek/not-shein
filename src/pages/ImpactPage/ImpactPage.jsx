@@ -54,6 +54,7 @@ export default function ImpactPage({ cart }) {
                 </section> */}
             </div>
             <div className="carouselContainer">
+            <div className="infographic-title"><span className="inner-title"><strong>Fast</strong>Fashion:<br /><span>the </span><strong>reality</strong></span></div>
                 <Carousel className='impactCarousel'>
                     <Carousel.Item>
                         <img className='carouselImg1' src='https://static01.nyt.com/images/2019/10/13/books/review/schlossberg01/merlin_70552169_4c9a0a6c-f2cd-47b8-a8a7-e20811bd7848-superJumbo.jpg' alt='first slide'/>
@@ -77,6 +78,15 @@ export default function ImpactPage({ cart }) {
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
+            </div>
+            <div className='triangle'>
+
+            </div>
+            <div className='chartContainer'>
+            <div className="infographic-title"><span className="inner-title"><strong>Fast</strong>Fashion:<br /><span>the demand for</span><strong>synthetic materials</strong></span></div>
+                <div className='chart'>
+                    <img className='chartImg' src='https://www.hawthornintl.com/wp-content/uploads/2017/08/natural-vs-synthetic-fibres.jpg' alt='statistics' />
+                </div>
             </div>
             <div className='footer'>
                 <h3>@Not Shein</h3>
