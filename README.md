@@ -5,7 +5,8 @@
 Not Shein is a mock e-commerce website meant to simulate a multipage marketplace with React, but also to reflect on the widely neglected impact of the fast fashion industry simulated here. 
 
 ## Getting Started:
-The site can be found <a href="https://notshein.herokuapp.com/">here</a>
+The site can be found <a href="https://notshein.herokuapp.com/">here</a> <br>
+Make sure to checkout which will take you to a detailed page with statistics surrounding the impact of your hypothetical order!
 
 
 The source code can be found <a href="https://github.com/achasek/not-shein">here</a>
