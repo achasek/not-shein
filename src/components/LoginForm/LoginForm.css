@@ -1,0 +1,54 @@
+.authBody {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg,
+            rgba(217, 237, 146, 1) 0%,
+            rgba(153, 217, 140, 1) 25%,
+            rgba(82, 182, 154, 1) 50%,
+            rgba(22, 138, 173, 1) 75%,
+            rgba(30, 96, 145, 1) 100%);
+    animation: AnimateBG 20s ease infinite;
+}
+
+@keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.loginBtn {
+    margin-top: 10%;
+}
+
+.titleCtnr {
+    text-align: center;
+    max-width: 80vw;
+    padding: 20px;
+    margin: 10px;
+    /* font-family: 'Lato'; */
+    font-size: large;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+  
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+}

@@ -1,8 +1,9 @@
 // Rewrite the SignUpForm as a function component
 import { useState } from 'react'
 import { signUp } from '../../utilities/users-service'
+import '../LoginForm/LoginForm.css'
 
-export default function SignUpForm({ setUser }) {
+export default function SignUpForm({ setUser, setShowLogin, showLogin }) {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -37,7 +38,11 @@ export default function SignUpForm({ setUser }) {
     }
 
     return(
-        <div>
+        <div className="authBody">
+            <div className='titleCtnr'>
+                <h1><strong>Not-Shein:</strong></h1>
+                <h3><em>fast fashion broken down</em></h3>
+            </div>
             <div className="form-container">
               <form autoComplete="off" onSubmit={handleSubmit}>
                 <label>Name</label>
@@ -51,6 +56,7 @@ export default function SignUpForm({ setUser }) {
                 <button type="submit" disabled={disable}>SIGN UP</button>
               </form>
             </div>
+            <button className='loginBtn' onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'Not Signed Up Yet?' : 'Back to Login'}</button>
             <p className="error-message">&nbsp;{formData.error}</p>
           </div>
     )

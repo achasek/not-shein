@@ -2,7 +2,7 @@ import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
 import './LoginForm.css';
 
-export default function LoginForm({ setUser }) {
+export default function LoginForm({ setUser, setShowLogin, showLogin }) {
   const [credentials, setCredentials] = useState({
     email: '',
     password: ''
@@ -25,7 +25,11 @@ export default function LoginForm({ setUser }) {
   }
 
   return (
-    <div>
+    <div className='authBody'>
+      <div className='titleCtnr'>
+        <h1><strong>Not-Shein:</strong></h1>
+        <h3><em>fast fashion broken down</em></h3>
+      </div>
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
           <label>Email</label>
@@ -35,6 +39,7 @@ export default function LoginForm({ setUser }) {
           <button type="submit">LOG IN</button>
         </form>
       </div>
+      <button className='loginBtn' onClick={() => setShowLogin(!showLogin)}>{showLogin ? 'Not Signed Up Yet?' : 'Back to Login'}</button>
       <p className="error-message">&nbsp;{error}</p>
     </div>
   );
